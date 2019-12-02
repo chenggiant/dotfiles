@@ -48,6 +48,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround', {'branch': 'master'}
 Plug 'tpope/vim-repeat', {'branch': 'master'}
 Plug 'ctrlpvim/ctrlp.vim', {'branch': 'master'}
+Plug 'morhetz/gruvbox', {'branch': 'master'}
 
 " Initialize plugin system call plug#end()
 call plug#end()
@@ -166,7 +167,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme gruvbox
 catch
 endtry
 
