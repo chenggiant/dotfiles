@@ -47,6 +47,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround', {'branch': 'master'}
 Plug 'tpope/vim-repeat', {'branch': 'master'}
+Plug 'ctrlpvim/ctrlp.vim', {'branch': 'master'}
 
 " Initialize plugin system call plug#end()
 call plug#end()
@@ -70,6 +71,9 @@ let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Use jk for ESC
+inoremap jk <ESC>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -465,6 +469,13 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctrlp  setting
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
